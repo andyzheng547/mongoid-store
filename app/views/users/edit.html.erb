@@ -1,2 +1,7 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="container-fluid">
+  <div class="row">
+    <h1>Editing <%= @user.first_name %> <%= @user.last_name %></h1>
+  </div>
+
+  <%= render "form" %>
+</div>

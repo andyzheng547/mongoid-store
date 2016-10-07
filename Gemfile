@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # Mongoid
-gem 'mongoid', '~> 6.0.0'
+gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

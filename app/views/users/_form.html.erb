@@ -1,0 +1,39 @@
+<!-- Errors -->
+<% if @user.errors.any? %>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h4><%= pluralize(@task.errors.count, "error") %> errors prevented the user from being saved: </h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <%= @user.errors.full_messages.each do |msg| %>
+      <div class="col-xs-12 alert alert-danger">
+        <p><%= msg %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<!-- User Form -->
+<%= form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
