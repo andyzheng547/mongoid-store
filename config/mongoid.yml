@@ -1,7 +1,9 @@
 development:
   clients:
     default:
-      uri: <%= ENV['DB_URL'] %>
+      database: mongoid_store_development
+      hosts:
+        - localhost:27017
       options:
         max_retries: 5
         retry_interval: 15
